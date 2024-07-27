@@ -90,6 +90,12 @@ function getWeatherDetails(name, lat, lon, country, state) {
 
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         let date = new Date();
+        //video playing
+        document.querySelector('.video').innerHTML=`
+        <video autoplay loop> <source src="/videos/video1.mp4" type="video/mp4"></video>
+        `;
+
+        //details update
         currentWeatherCard.innerHTML = `<div class="current-weather">
                         <div class="detail">
                             <p>Now</p>

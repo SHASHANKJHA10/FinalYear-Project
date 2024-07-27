@@ -33,6 +33,26 @@ body {
     padding: 15px 0;
 }
 
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
 #city_input {
     background-color: var(--bg-color2);
     border: none;
