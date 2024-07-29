@@ -91,8 +91,11 @@ function getWeatherDetails(name, lat, lon, country, state) {
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         let date = new Date();
         //video playing
+        var vidName= data.weather[0].main
+        vidName= vidName.toLowerCase();
+        console.log(vidName);
         document.querySelector('.video').innerHTML=`
-        <video autoplay loop> <source src="/videos/video1.mp4" type="video/mp4"></video>
+        <video autoplay loop> <source src="/videos/${vidName}.mp4" type="video/mp4"></video>
         `;
 
         //details update
